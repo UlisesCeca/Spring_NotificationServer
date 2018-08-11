@@ -1,4 +1,4 @@
-package com.example.ulises.template.services.exceptions;
+package com.ulises.template.services.exceptions;
 
 public class UserNotFoundException extends RuntimeException{
 }

@@ -1,9 +1,9 @@
-package com.example.ulises.template.rest.endpoints;
+package com.ulises.template.rest.endpoints;
 
-import com.example.ulises.template.rest.dto.ResponseOKDTO;
-import com.example.ulises.template.rest.dto.UserDTO;
-import com.example.ulises.template.services.entities.User;
-import com.example.ulises.template.services.UserService;
+import com.ulises.template.rest.dto.ResponseOKDTO;
+import com.ulises.template.rest.dto.UserDTO;
+import com.ulises.template.services.entities.User;
+import com.ulises.template.services.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import static com.example.ulises.template.constants.Constants.*;
+import static com.ulises.template.constants.Constants.*;
 
 @Component
 @Path(ENDPOINT_USERS)
