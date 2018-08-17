@@ -1,12 +1,10 @@
 package com.ulises.notificationsserver.constants;
 
 public class Constants {
-    public static final String REQUEST_ERROR_NOT_FOUND = "This endpoint doesn't exist.";
     public static final String REQUEST_ERROR_INTERNAL_SERVER_ERROR = "There has been a server error and your request " +
             "couldn't be processed.";
-    public static final String REQUEST_ERROR_NULL_BODY = "Request's body must not be null.";
-    public static final String RESPONSE_OK_USER_CREATED = "User exists.";
-    public static final String ENDPOINT_USERS = "/users";
-    public static final String ENDPOINT_USERS_GET = "/get";
-    public static final String REQUEST_ERROR_USER_DOESNT_EXOST = "Your username or password is incorrect.";
+    public static final String EMAIL_HOST = "ssl0.ovh.net";
+    public static final String EMAIL_USERNAME = "ulises@ulisesceca.com";
+    public static final String EMAIL_PASSWORD = "111111111";
+    public static final int EMAIL_PORT = 587;
 }
