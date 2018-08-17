@@ -12,19 +12,25 @@ public class EmailDTO {
     @NotNull(message = "to must not be empty.")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String to;
+
     @NotNull(message = "from must not be empty.")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String from;
+
     @NotNull(message = "subject must not be empty.")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String subject;
+
     @NotNull(message = "body must not be empty.")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String body;
+
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<String> cc;
+
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<String> bcc;
+
     @NotNull(message = "context must not be empty.")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Context context;

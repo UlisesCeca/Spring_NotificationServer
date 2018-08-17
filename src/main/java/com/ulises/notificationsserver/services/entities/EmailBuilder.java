@@ -39,13 +39,13 @@ public class EmailBuilder {
         return this;
     }
 
-    public EmailBuilder cc(final String cc) {
-        this.cc.add(cc);
+    public EmailBuilder cc(final List<String> cc) {
+        this.cc = cc;
         return this;
     }
 
-    public EmailBuilder bcc(final String bcc) {
-        this.bcc.add(bcc);
+    public EmailBuilder bcc(final List<String> bcc) {
+        this.bcc = bcc;
         return this;
     }
 
