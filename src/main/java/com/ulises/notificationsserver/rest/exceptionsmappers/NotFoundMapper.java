@@ -11,12 +11,12 @@ import javax.ws.rs.ext.ExceptionMapper;
 public class NotFoundMapper implements ExceptionMapper<NotFoundException> {
     @Override
     public Response toResponse(NotFoundException e) {
-        final ErrorDTO errorDTO = ErrorDTO.builder()
+        /*final ErrorDTO errorDTO = ErrorDTO.builder()
                 .message(Constants.REQUEST_ERROR_NOT_FOUND)
-                .build();
+                .build();*/
         return Response.status(Response.Status.NOT_FOUND)
                 .type(MediaType.APPLICATION_JSON_TYPE)
-                .entity(errorDTO)
+                .entity("")
                 .build();
     }
 }
