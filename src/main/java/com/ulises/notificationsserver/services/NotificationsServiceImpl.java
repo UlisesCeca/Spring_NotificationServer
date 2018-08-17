@@ -12,7 +12,7 @@ public class NotificationsServiceImpl implements NotificationsService{
     public JavaMailSender emailSender;
 
     @Override
-    public void recoverPasswordByEmail(final Email email) {
+    public void sendEmail(final Email email) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(email.getFrom());
         message.setTo(email.getTo());
