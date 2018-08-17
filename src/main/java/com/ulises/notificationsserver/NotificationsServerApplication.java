@@ -1,5 +1,6 @@
 package com.ulises.notificationsserver;
 
+import com.ulises.notificationsserver.rest.endpoints.NotificationsEndpoint;
 import com.ulises.notificationsserver.rest.exceptionsmappers.InternalServerErrorMapper;
 import com.ulises.notificationsserver.rest.exceptionsmappers.NotFoundMapper;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -24,7 +25,8 @@ public class NotificationsServerApplication {
 	@Bean
 	public ResourceConfig jerseyConfig() {
 		final ResourceConfig resourceConfig = new ResourceConfig();
-		resourceConfig.register(NotFoundMapper.class);
+        resourceConfig.register(NotificationsEndpoint.class);
+        resourceConfig.register(NotFoundMapper.class);
 		resourceConfig.register(InternalServerErrorMapper.class);
 		return resourceConfig;
 	}
