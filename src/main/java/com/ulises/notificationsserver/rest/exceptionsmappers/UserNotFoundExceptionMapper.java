@@ -1,12 +1,12 @@
-package com.ulises.template.rest.exceptionsmappers;
+package com.ulises.notificationsserver.rest.exceptionsmappers;
 
-import com.ulises.template.rest.dto.ErrorDTO;
-import com.ulises.template.services.exceptions.UserNotFoundException;
+import com.ulises.notificationsserver.rest.dto.ErrorDTO;
+import com.ulises.notificationsserver.services.exceptions.UserNotFoundException;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 
-import static com.ulises.template.constants.Constants.REQUEST_ERROR_USER_DOESNT_EXOST;
+import static com.ulises.notificationsserver.constants.Constants.REQUEST_ERROR_USER_DOESNT_EXOST;
 
 public class UserNotFoundExceptionMapper implements ExceptionMapper<UserNotFoundException> {
     @Override

@@ -1,4 +1,4 @@
-package com.ulises.template.services.entities;
+package com.ulises.notificationsserver.services.entities;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

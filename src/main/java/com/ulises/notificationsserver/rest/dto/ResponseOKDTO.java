@@ -1,4 +1,4 @@
-package com.ulises.template.rest.dto;
+package com.ulises.notificationsserver.rest.dto;
 
 import lombok.Builder;
 import lombok.Data;

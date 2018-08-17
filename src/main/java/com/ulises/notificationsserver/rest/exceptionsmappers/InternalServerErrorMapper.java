@@ -1,12 +1,12 @@
-package com.ulises.template.rest.exceptionsmappers;
+package com.ulises.notificationsserver.rest.exceptionsmappers;
 
-import com.ulises.template.rest.dto.ErrorDTO;
+import com.ulises.notificationsserver.rest.dto.ErrorDTO;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 
-import static com.ulises.template.constants.Constants.REQUEST_ERROR_INTERNAL_SERVER_ERROR;
+import static com.ulises.notificationsserver.constants.Constants.REQUEST_ERROR_INTERNAL_SERVER_ERROR;
 
 public class InternalServerErrorMapper implements ExceptionMapper<Exception> {
     @Override

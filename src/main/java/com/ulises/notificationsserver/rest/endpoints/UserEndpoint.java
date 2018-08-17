@@ -1,9 +1,9 @@
-package com.ulises.template.rest.endpoints;
+package com.ulises.notificationsserver.rest.endpoints;
 
-import com.ulises.template.rest.dto.ResponseOKDTO;
-import com.ulises.template.rest.dto.UserDTO;
-import com.ulises.template.services.entities.User;
-import com.ulises.template.services.UserService;
+import com.ulises.notificationsserver.rest.dto.ResponseOKDTO;
+import com.ulises.notificationsserver.rest.dto.UserDTO;
+import com.ulises.notificationsserver.services.entities.User;
+import com.ulises.notificationsserver.services.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import static com.ulises.template.constants.Constants.*;
+import static com.ulises.notificationsserver.constants.Constants.*;
 
 @Component
 @Path(ENDPOINT_USERS)
