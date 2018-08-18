@@ -32,7 +32,6 @@ public class NotificationsEndpoint {
     @Path(ENDPOINT_NOTIFICATIONS_EMAIL)
     @Produces(MediaType.APPLICATION_JSON)
     public Response sendEmail(@Valid @NotNull(message = REQUEST_ERROR_NULL_BODY) final EmailDTO email) {
-        System.out.println(email);
         this.notificationsService.sendEmail(this.emailMapper.map(email));
         return Response.noContent().build();
     }
