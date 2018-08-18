@@ -2,7 +2,7 @@ package com.ulises.notificationsserver.rest.endpoints;
 
 
 import com.ulises.notificationsserver.rest.dto.EmailDTO;
-import com.ulises.notificationsserver.rest.mappers.EmailMapperImpl;
+import com.ulises.notificationsserver.rest.mappers.EmailMapper;
 import com.ulises.notificationsserver.services.NotificationsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -25,14 +25,15 @@ public class NotificationsEndpoint {
     @Autowired
     private NotificationsService notificationsService;
     @Autowired
-    private EmailMapperImpl emailMapperImpl;
+    private EmailMapper emailMapper;
 
 
     @POST
     @Path(ENDPOINT_NOTIFICATIONS_EMAIL)
     @Produces(MediaType.APPLICATION_JSON)
     public Response sendEmail(@Valid @NotNull(message = REQUEST_ERROR_NULL_BODY) final EmailDTO email) {
-        this.notificationsService.sendEmail(this.emailMapperImpl.map(email));
+        System.out.println(email);
+        this.notificationsService.sendEmail(this.emailMapper.map(email));
         return Response.noContent().build();
     }
 }

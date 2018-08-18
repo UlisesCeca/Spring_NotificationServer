@@ -61,10 +61,8 @@ public class EmailBuilder {
         entity.setSubject(this.subject);
         entity.setFrom(this.from);
         entity.setContext(this.context);
-        if(this.cc.size() > 0)
-            entity.setCc(this.cc);
-        if(this.bcc.size() > 0)
-            entity.setBcc(this.bcc);
+        entity.setCc(this.cc);
+        entity.setBcc(this.bcc);
         return entity;
     }
 }

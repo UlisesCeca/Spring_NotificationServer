@@ -90,4 +90,17 @@ public class EmailDTO {
     public void setContext(Context context) {
         this.context = context;
     }
+
+    @Override
+    public String toString() {
+        return "EmailDTO{" +
+                "to='" + to + '\'' +
+                ", from='" + from + '\'' +
+                ", subject='" + subject + '\'' +
+                ", body='" + body + '\'' +
+                ", cc=" + cc +
+                ", bcc=" + bcc +
+                ", context=" + context +
+                '}';
+    }
 }

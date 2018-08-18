@@ -1,5 +1,6 @@
 package com.ulises.notificationsserver.services.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Email {
@@ -10,6 +11,12 @@ public class Email {
     private List<String> cc;
     private List<String> bcc;
     private Context context;
+
+
+    public Email() {
+        this.cc = new ArrayList<>();
+        this.bcc = new ArrayList<>();
+    }
 
     public Context getContext() {
         return context;
