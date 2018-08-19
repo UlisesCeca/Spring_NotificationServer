@@ -7,6 +7,7 @@ import com.ulises.notificationsserver.services.NotificationsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.mail.MessagingException;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.ws.rs.POST;
@@ -31,7 +32,8 @@ public class NotificationsEndpoint {
     @POST
     @Path(ENDPOINT_NOTIFICATIONS_EMAIL)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response sendEmail(@Valid @NotNull(message = REQUEST_ERROR_NULL_BODY) final EmailDTO email) {
+    public Response sendEmail(@Valid @NotNull(message = REQUEST_ERROR_NULL_BODY) final EmailDTO email) throws MessagingException {
+        System.out.println("Emtra");
         this.notificationsService.sendEmail(this.emailMapper.map(email));
         return Response.noContent().build();
     }
